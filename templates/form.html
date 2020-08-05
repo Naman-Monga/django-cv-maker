@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>CV Builder Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+
+<body>
+
+    <form id="regForm" action="">
+        <h1>Register:</h1>
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">Personal Info
+            <p><input placeholder="Full name..." oninput="this.className = ''" name="name"></p>
+            <p><input placeholder="Headline..." oninput="this.className = ''" name="title"></p>
+            <p><input placeholder="Email..." oninput="this.className = ''" name="email"></p>
+            <p><input placeholder="Website url..." oninput="this.className = ''" name="website"></p>
+            <p><input placeholder="Phone number..." oninput="this.className = ''" name="phone"></p>
+
+        </div>
+
+
+        <div class="tab">Description:
+            <p><input placeholder="About you..." oninput="this.className = ''" name="description"></p>
+        </div>
+
+
+        <div class="tab">Work Experience:
+            <p><input placeholder="Title..." oninput="this.className = ''" name="title_exp1"></p>
+            <p><input placeholder="Duration..." oninput="this.className = ''" name="duration_exp1"></p>
+            <p><input placeholder="Description..." oninput="this.className = ''" name="description_exp1"></p>
+
+            <p><input placeholder="Title..." oninput="this.className = ''" name="title_exp1"></p>
+            <p><input placeholder="Duration..." oninput="this.className = ''" name="duration_exp1"></p>
+            <p><input placeholder="Description..." oninput="this.className = ''" name="description_exp1"></p>
+
+            <p><input placeholder="Title..." oninput="this.className = ''" name="title_exp1"></p>
+            <p><input placeholder="Duration..." oninput="this.className = ''" name="duration_exp1"></p>
+            <p><input placeholder="Description..." oninput="this.className = ''" name="description_exp1"></p>
+
+        </div>
+        <div class="tab">SKills:
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill1"></p>
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill2"></p>
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill3"></p>
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill4"></p>
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill5"></p>
+            <p><input placeholder="Your Skill..." oninput="this.className = ''" name="skill6"></p>
+        </div>
+
+        <div class="tab">
+            <p><input placeholder="Project Title" oninput="this.className = ''" name="title_pro1"></p>
+            <p><input placeholder="Project Description" oninput="this.className = ''" name="description_pro1"></p>
+            <p><input placeholder="Project Title" oninput="this.className = ''" name="title_pro2"></p>
+            <p><input placeholder="Project Description" oninput="this.className = ''" name="description_pro2"></p>
+            <p><input placeholder="Project Title" oninput="this.className = ''" name="title_pro3"></p>
+            <p><input placeholder="Project Description" oninput="this.className = ''" name="description_pro3"></p>
+        </div>
+
+        <div class="tab">Education:
+            <p><input placeholder="BE From XYZ University, LA..." oninput="this.className = ''" name="title_edu1"></p>
+            <p><input placeholder="From 10th July, 1989 - 15 July, 2021..." oninput="this.className = ''" name="duration_edu1"></p>
+            <p><input placeholder="BE From XYZ University, LA..." oninput="this.className = ''" name="title_edu2"></p>
+            <p><input placeholder="From 10th July, 1989 - 15 July, 2021..." oninput="this.className = ''" name="duration_edu2"></p>
+            <p><input placeholder="BE From XYZ University, LA..." oninput="this.className = ''" name="title_edu3"></p>
+            <p><input placeholder="From 10th July, 1989 - 15 July, 2021..." oninput="this.className = ''" name="duration_edu3"></p>
+        </div>
+
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
